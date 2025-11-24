@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Feynman-Demo: Symbolic Regression untuk Fisika</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f8fa;
+        }
+        .header {
+            background-color: #24292e;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+        }
+        h1 {
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        h2 {
+            color: #0366d6;
+            margin-top: 30px;
+            border-bottom: 1px solid #c9d1d9;
+            padding-bottom: 5px;
+        }
+        pre {
+            background-color: #f6f8fa;
+            border-radius: 6px;
+            padding: 10px;
+            overflow-x: auto;
+            font-size: 0.9em;
+            display: block;
+        }
+        .plot-container {
+            text-align: center;
+            margin: 30px 0;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        .plot-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        ⚛️ Demo Proyek: Symbolic Regression untuk Solusi Fisika
+    </div>
+
+    <div class="container">
+        <h1>Validasi Metode Symbolic Regression (SR)</h1>
+
+        <p>Proyek ini mendemonstrasikan bagaimana **Symbolic Regression (SR)** digunakan untuk menemukan solusi analitik (persamaan tertutup) dari data numerik masalah fisika, sesuai dengan metodologi jurnal.</p>
+        
+        <h2>Persamaan Analitik yang Ditemukan</h2>
+        <p>Setelah memproses data dengan SR, persamaan yang ditemukan sangat mirip dengan persamaan fisika sejati (misalnya, Solusi Landau-Zener):</p>
+        <pre><code>$P = \exp(-C \cdot \Delta E^2 / v)$</code></pre>
+
+        <p>Berikut adalah visualisasi yang memvalidasi hasil penemuan persamaan tersebut. (Pastikan Anda telah menjalankan <code>generate_plots.py</code> dan mengunggah keempat file gambar ke repositori.)</p>
+
+        <div class="plot-container">
+            <h3>Grafik 1: Kecocokan Data vs. Solusi Analitik</h3>
+            <img src="plot_1_fit.png" alt="Grafik Kecocokan Kurva" title="Membandingkan data numerik (titik) dengan persamaan SR (garis)">
+        </div>
+
+        <div class="plot-container">
+            <h3>Grafik 2: Analisis Residual (Kesalahan Model)</h3>
+            <img src="plot_2_residuals.png" alt="Grafik Residual" title="Residual harus mendekati nol untuk fitting yang baik">
+        </div>
+
+        <div class="plot-container">
+            <h3>Grafik 3: Permukaan Solusi 3D (Jika lebih dari 1 Input)</h3>
+            <img src="plot_3_surface.png" alt="Grafik Permukaan 3D" title="Visualisasi solusi dalam ruang tiga dimensi">
+        </div>
+
+        <div class="plot-container">
+            <h3>Grafik 4: Pareto Front (Kompleksitas vs. Akurasi)</h3>
+            <img src="plot_4_pareto.png" alt="Grafik Pareto Front" title="Menentukan model yang paling seimbang antara ringkas dan akurat">
+        </div>
+
+    </div>
+
+</body>
+</html>
